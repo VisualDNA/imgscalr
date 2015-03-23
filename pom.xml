@@ -126,7 +126,7 @@
 				<executions>
 					<execution>
 						<id>sign-artifacts</id>
-						<goals />
+						<phase>none</phase>
 					</execution>
 				</executions>
 			</plugin>
