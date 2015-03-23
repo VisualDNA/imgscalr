@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
@@ -27,22 +28,22 @@
 		<connection>scm:git:git@github.com:VisualDNA/imgscalr.git</connection>
 		<developerConnection>scm:git:git@github.com:VisualDNA/imgscalr.git</developerConnection>
 		<url>git@github.com:VisualDNA/imgscalr.git</url>
-    </scm>
+	</scm>
 
-       <distributionManagement>
-               <repository>
-                       <id>visualdna-releases</id>
-                       <name>VisualDNA Releases</name>
-                       <url>https://maven.visualdna.com/nexus/content/repositories/releases</url>
-                       <layout>default</layout>
-               </repository>
-               <snapshotRepository>
-                       <id>visualdna-snapshots</id>
-                       <name>VisualDNA Snapshots</name>
-                       <url>https://maven.visualdna.com/nexus/content/repositories/snapshots</url>
-                       <layout>default</layout>
-               </snapshotRepository>
-       </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>visualdna-releases</id>
+			<name>VisualDNA Releases</name>
+			<url>https://maven.visualdna.com/nexus/content/repositories/releases</url>
+			<layout>default</layout>
+		</repository>
+		<snapshotRepository>
+			<id>visualdna-snapshots</id>
+			<name>VisualDNA Snapshots</name>
+			<url>https://maven.visualdna.com/nexus/content/repositories/snapshots</url>
+			<layout>default</layout>
+		</snapshotRepository>
+	</distributionManagement>
 
 
 	<issueManagement>
@@ -118,29 +119,26 @@
 					</descriptorRefs>
 				</configuration>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.apache.maven.plugins</groupId> -->
-			<!-- <artifactId>maven-gpg-plugin</artifactId> -->
-			<!-- <version>1.4</version> -->
-			<!-- <executions> -->
-			<!-- <execution> -->
-			<!-- <id>sign-artifacts</id> -->
-			<!-- <phase>verify</phase> -->
-			<!-- <goals> -->
-			<!-- <goal>sign</goal> -->
-			<!-- </goals> -->
-			<!-- </execution> -->
-			<!-- </executions> -->
-			<!-- </plugin> -->
-<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.1</version>
-            <configuration>
-                <source>1.7</source>
-                <target>1.7</target>
-            </configuration>
-        </plugin>
+			<!-- Disable this in VDNA case -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<goals />
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
