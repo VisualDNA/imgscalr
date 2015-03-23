@@ -27,7 +27,23 @@
 		<connection>scm:git:git@github.com:thebuzzmedia/imgscalr.git</connection>
 		<developerConnection>scm:git:git@github.com:thebuzzmedia/imgscalr.git</developerConnection>
 		<url>git@github.com:thebuzzmedia/imgscalr.git</url>
-	</scm>
+    </scm>
+
+       <distributionManagement>
+               <repository>
+                       <id>visualdna-releases</id>
+                       <name>VisualDNA Releases</name>
+                       <url>https://maven.visualdna.com/nexus/content/repositories/releases</url>
+                       <layout>default</layout>
+               </repository>
+               <snapshotRepository>
+                       <id>visualdna-snapshots</id>
+                       <name>VisualDNA Snapshots</name>
+                       <url>https://maven.visualdna.com/nexus/content/repositories/snapshots</url>
+                       <layout>default</layout>
+               </snapshotRepository>
+       </distributionManagement>
+
 
 	<issueManagement>
 		<system>GitHub</system>
